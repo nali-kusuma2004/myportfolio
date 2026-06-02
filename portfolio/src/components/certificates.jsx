@@ -1,6 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 
-export default function certificates(){
+export default function Certificates(){
     const certificate=[
         {
         
@@ -39,21 +39,20 @@ export default function certificates(){
     ];
     return (
         <>
-        <div className="certificates">
-                <h2>Achievements & certificates </h2>
-            <div className="cert-div">
+        <section className="bg-gradient-to-r from-purple-800 to-rose-900 px-6 py-12 text-white md:px-16">
+                <h2 className="mb-8 text-center text-3xl font-bold text-amber-500">Achievements & Certificates</h2>
+            <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
                  {certificate.map((cert,index)=>(
-                    <div key={index} className="cert-item">
-                         <img src={cert.issuedby} width="100px" height="100px" />
-                         <span >{cert.certname}</span>
-                         {/* <button><a href={cert.link}>view</a></button> */}
-                         <a href={cert.link} target="_blank">view  </a>
+                    <div key={index} className="flex items-center gap-4 rounded-2xl border border-white/40 bg-white/20 p-4 backdrop-blur-md">
+                         <img src={cert.issuedby} width="100" height="100" alt={cert.certname} className="h-20 w-20 rounded-lg object-cover" />
+                         <span className="flex-1 text-sm font-medium text-white">{cert.certname}</span>
+                         <a href={cert.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-indigo-950 px-4 py-2 text-sm text-white shadow transition hover:bg-indigo-800">View <FaArrowRight size={12} /></a>
                     </div>
                  ))
                  }
                  </div>
 
-        </div>
+        </section>
         </>
     )
 }

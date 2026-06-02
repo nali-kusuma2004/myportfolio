@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Education() {
   const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
     {
@@ -36,7 +36,7 @@ export default function Education() {
 
   const updateSlide = (index) => {
     if (containerRef.current) {
-      containerRef.current.style.transform = `translateX(-${index * 40}%)`;
+      containerRef.current.style.transform = `translateX(-${index * 100}%)`;
     }
   };
 
@@ -53,51 +53,42 @@ export default function Education() {
   };
 
   return (
-    <section id="education" className="education-section">
-      <h2>Education</h2>
+    <section id="education" className="overflow-hidden bg-gradient-to-r from-zinc-800 to-purple-800 px-6 py-12 text-white md:px-16">
+      <h2 className="mb-8 text-center text-3xl font-bold text-amber-200">Education</h2>
       <div
         ref={containerRef}
-        className="education-container"
+        className="flex gap-6 transition-transform duration-500 ease-in-out"
         style={{
-          display: "flex",
-          transition: "transform 0.5s ease",
           width: "100%",
         }}
       >
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="education-item"
+            className="relative min-h-[260px] min-w-full rounded-xl bg-fuchsia-300/20 p-6 shadow-lg shadow-black/30 md:min-w-[70%]"
             style={{
-              minWidth: "22%",
-              padding: "2rem",
-              animationDelay: `${index * 2 + 5}s`,
+              animationDelay: `${index * 0.2}s`,
             }}
           >
-            <h3 style={{
-               color: '#45033fff',
-            }}>{slide.title}</h3>
-            <p
-              style={{ 
-                color: '#ffffff',
-              }}>
+            <h3 className="pr-40 text-lg font-semibold text-fuchsia-200">{slide.title}</h3>
+            <p className="mt-2 text-sm text-white/90">
               {slide.institution}, <span>{slide.startyear}</span> - <span>{slide.endyear}</span>
             </p>
-            <p style={{color:'#371b6bff'}}>CGPA/ PERCENTAGE : {slide.CGPA} </p>
-            <p style= {{width: "50%" , color:' #7b0505ff', fontSize: "15px"  }}>{slide.details}</p>
-            {slide.img && <img src={slide.img} width="100" height="100" alt="Education" />}
+            <p className="mt-2 text-sm font-semibold text-violet-100">CGPA / PERCENTAGE: {slide.CGPA}</p>
+            <p className="mt-2 max-w-xl text-sm text-zinc-100">{slide.details}</p>
+            {slide.img && <img src={slide.img} width="100" height="100" alt="Education" className="absolute right-4 top-4 h-20 w-20 rounded-lg object-cover shadow-lg shadow-white/30 md:h-24 md:w-24" />}
           </div>
         ))}
       </div>
 
-      {/* <div style={{ marginTop: "1rem" }}>
-        <button onClick={prev} style={{ marginRight: "1rem" }}>
-          <FaArrowLeft size={20} color="#8245ec" />
+      <div className="mt-6 flex items-center justify-center gap-4">
+        <button onClick={prev} className="rounded-lg bg-violet-500 px-4 py-2 font-medium text-white transition hover:bg-violet-400">
+          Prev
         </button>
-        <button onClick={next}>
-          <FaArrowRight size={20} color="#8245ec" />
+        <button onClick={next} className="rounded-lg bg-violet-500 px-4 py-2 font-medium text-white transition hover:bg-violet-400">
+          Next
         </button>
-      </div> */}
+      </div>
     </section>
   );
 }
