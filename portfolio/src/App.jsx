@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useEffect } from 'react'
 import Navbar from './components/navbar.jsx'
 import About from './components/about.jsx'
 import Education from './components/education.jsx'
@@ -10,6 +11,27 @@ import Contact from './components/contact.jsx'
 import './App.css'
 
 function App() {
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("section-visible");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    sections.forEach((section) => {
+      section.classList.add("section-reveal");
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
    <div>

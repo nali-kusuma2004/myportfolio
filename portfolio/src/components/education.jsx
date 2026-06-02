@@ -3,6 +3,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 export default function Education() {
   const containerRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
     {
@@ -90,14 +91,14 @@ export default function Education() {
         ))}
       </div>
 
-      {/* <div style={{ marginTop: "1rem" }}>
+      <div style={{ marginTop: "1rem", display: "flex", gap: "0.75rem", justifyContent: "center" }}>
         <button onClick={prev} style={{ marginRight: "1rem" }}>
           <FaArrowLeft size={20} color="#8245ec" />
         </button>
         <button onClick={next}>
           <FaArrowRight size={20} color="#8245ec" />
         </button>
-      </div> */}
+      </div>
     </section>
   );
 }

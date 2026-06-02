@@ -8,12 +8,12 @@ export default function Skills(){
         <>
         <section id="skills" className="skills-section">
              <h2>Technical Skills</h2>
-             <div class="floating-icons">
-  <img src="https://webdevmonk.com/main/html.png" alt="HTML" class="icon html" />
-  <img src="https://ultimatecourses.com/assets/category/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg" alt="CSS" class="icon css" />
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZR9npLfmApWYC0keCwuwCDzeini7NocCW8w&s" alt="JavaScript" class="icon js" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="React" class="icon react" />
-  <img src="https://www.mindrops.com/images/nodejs-image.webp" alt="Node.js" class="icon node" />
+             <div className="floating-icons">
+  <img src="https://webdevmonk.com/main/html.png" alt="HTML" className="icon html" />
+  <img src="https://ultimatecourses.com/assets/category/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg" alt="CSS" className="icon css" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZR9npLfmApWYC0keCwuwCDzeini7NocCW8w&s" alt="JavaScript" className="icon js" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="React" className="icon react" />
+  <img src="https://www.mindrops.com/images/nodejs-image.webp" alt="Node.js" className="icon node" />
 
 </div>
         <div className="skills-container">
