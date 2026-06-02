@@ -1,6 +1,6 @@
 import { FaArrowRight } from "react-icons/fa";
 
-export default function Certificates(){
+export default function certificates(){
     const certificate=[
         {
         
@@ -39,14 +39,15 @@ export default function Certificates(){
     ];
     return (
         <>
-        <div className="bg-gradient-to-r from-[#7b0499] to-[rgb(75,10,48)]">
-                <h2 className="mx-auto px-5 py-6 text-center text-3xl text-[goldenrod] md:px-20">Achievements & certificates </h2>
-            <div className="mx-4 flex flex-wrap py-2 md:mx-[60px]">
+        <div className="certificates">
+                <h2>Achievements & certificates </h2>
+            <div className="cert-div">
                  {certificate.map((cert,index)=>(
-                    <div key={index} className="my-3 flex w-full rounded-[15px] border border-white bg-[rgba(255,255,255,0.3)] p-3 text-white shadow-[3px_3px_2px_whitesmoke] backdrop-blur-[40px] md:mx-[42px] md:my-[23px] md:w-[35em] md:px-7">
-                         <img src={cert.issuedby} width="100" height="100" alt={cert.certname} className="rounded-[10px]" />
-                         <span className="mx-2 my-2 flex items-center py-2 text-black md:py-[30px]">{cert.certname}</span>
-                         <a href={cert.link} target="_blank" rel="noreferrer" className="ml-auto mt-6 rounded-[20px] bg-[#240950] px-3 py-2 text-[16px] text-white md:mt-[60px] md:text-[18px]">view</a>
+                    <div key={index} className="cert-item">
+                         <img src={cert.issuedby} width="100px" height="100px" />
+                         <span >{cert.certname}</span>
+                         {/* <button><a href={cert.link}>view</a></button> */}
+                         <a href={cert.link} target="_blank">view  </a>
                     </div>
                  ))
                  }
