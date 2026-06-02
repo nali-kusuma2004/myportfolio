@@ -39,20 +39,20 @@ export default function Certificates(){
     ];
     return (
         <>
-        <section className="bg-gradient-to-r from-purple-800 to-rose-900 px-6 py-12 text-white md:px-16">
-                <h2 className="mb-8 text-center text-3xl font-bold text-amber-500">Achievements & Certificates</h2>
-            <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
+        <div className="bg-gradient-to-r from-[#7b0499] to-[rgb(75,10,48)]">
+                <h2 className="mx-auto px-5 py-6 text-center text-3xl text-[goldenrod] md:px-20">Achievements & certificates </h2>
+            <div className="mx-4 flex flex-wrap py-2 md:mx-[60px]">
                  {certificate.map((cert,index)=>(
-                    <div key={index} className="flex items-center gap-4 rounded-2xl border border-white/40 bg-white/20 p-4 backdrop-blur-md">
-                         <img src={cert.issuedby} width="100" height="100" alt={cert.certname} className="h-20 w-20 rounded-lg object-cover" />
-                         <span className="flex-1 text-sm font-medium text-white">{cert.certname}</span>
-                         <a href={cert.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-indigo-950 px-4 py-2 text-sm text-white shadow transition hover:bg-indigo-800">View <FaArrowRight size={12} /></a>
+                    <div key={index} className="my-3 flex w-full rounded-[15px] border border-white bg-[rgba(255,255,255,0.3)] p-3 text-white shadow-[3px_3px_2px_whitesmoke] backdrop-blur-[40px] md:mx-[42px] md:my-[23px] md:w-[35em] md:px-7">
+                         <img src={cert.issuedby} width="100" height="100" alt={cert.certname} className="rounded-[10px]" />
+                         <span className="mx-2 my-2 flex items-center py-2 text-black md:py-[30px]">{cert.certname}</span>
+                         <a href={cert.link} target="_blank" rel="noreferrer" className="ml-auto mt-6 rounded-[20px] bg-[#240950] px-3 py-2 text-[16px] text-white md:mt-[60px] md:text-[18px]">view</a>
                     </div>
                  ))
                  }
                  </div>
 
-        </section>
+        </div>
         </>
     )
 }

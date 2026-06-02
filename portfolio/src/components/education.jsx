@@ -53,11 +53,12 @@ export default function Education() {
   };
 
   return (
-    <section id="education" className="overflow-hidden bg-gradient-to-r from-zinc-800 to-purple-800 px-6 py-12 text-white md:px-16">
-      <h2 className="mb-8 text-center text-3xl font-bold text-amber-200">Education</h2>
+    <section id="education" className="bg-gradient-to-r from-[#2c2a2a] to-[#7b0499] px-4 py-8 text-[rgb(252,252,252)] md:px-8">
+      <h2 className="mb-4 text-center text-3xl">Education</h2>
+      <div className="overflow-hidden">
       <div
         ref={containerRef}
-        className="flex gap-6 transition-transform duration-500 ease-in-out"
+        className="flex transition-transform duration-500 ease-in-out"
         style={{
           width: "100%",
         }}
@@ -65,29 +66,26 @@ export default function Education() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="relative min-h-[260px] min-w-full rounded-xl bg-fuchsia-300/20 p-6 shadow-lg shadow-black/30 md:min-w-[70%]"
+            className="relative mx-auto my-5 w-full min-w-full rounded bg-gradient-to-r from-[rgb(213,71,252)] to-[rgb(253,252,253)] p-4 text-[rgb(239,245,249)] md:w-[80%] md:p-8"
             style={{
-              animationDelay: `${index * 0.2}s`,
+              animationDelay: `${index * 2 + 5}s`,
             }}
           >
-            <h3 className="pr-40 text-lg font-semibold text-fuchsia-200">{slide.title}</h3>
-            <p className="mt-2 text-sm text-white/90">
-              {slide.institution}, <span>{slide.startyear}</span> - <span>{slide.endyear}</span>
+            <h3 className="pr-0 text-lg text-[#45033f] md:pr-[35%]">{slide.title}</h3>
+            <p className="text-white">
+              {slide.institution}, <span className="ml-2 rounded bg-[rgb(26,117,150)] px-2 py-0.5 text-[16px] text-[rgb(239,224,224)] md:text-[18px]">{slide.startyear}</span> - <span className="ml-2 rounded bg-[rgb(26,117,150)] px-2 py-0.5 text-[16px] text-[rgb(239,224,224)] md:text-[18px]">{slide.endyear}</span>
             </p>
-            <p className="mt-2 text-sm font-semibold text-violet-100">CGPA / PERCENTAGE: {slide.CGPA}</p>
-            <p className="mt-2 max-w-xl text-sm text-zinc-100">{slide.details}</p>
-            {slide.img && <img src={slide.img} width="100" height="100" alt="Education" className="absolute right-4 top-4 h-20 w-20 rounded-lg object-cover shadow-lg shadow-white/30 md:h-24 md:w-24" />}
+            <p className="text-[#371b6b]">CGPA/ PERCENTAGE : {slide.CGPA} </p>
+            <p className="w-full text-[15px] text-[#7b0505] md:w-1/2">{slide.details}</p>
+            {slide.img && <img src={slide.img} alt="Education" className="mt-3 h-[150px] w-[170px] rounded object-cover shadow-[0_0_25px_white] md:absolute md:left-[65%] md:top-0 md:h-[247px] md:w-[440px]" />}
           </div>
         ))}
       </div>
+      </div>
 
-      <div className="mt-6 flex items-center justify-center gap-4">
-        <button onClick={prev} className="rounded-lg bg-violet-500 px-4 py-2 font-medium text-white transition hover:bg-violet-400">
-          Prev
-        </button>
-        <button onClick={next} className="rounded-lg bg-violet-500 px-4 py-2 font-medium text-white transition hover:bg-violet-400">
-          Next
-        </button>
+      <div className="mt-4 flex justify-center gap-4">
+        <button onClick={prev} className="rounded bg-violet-700 px-4 py-2 text-white hover:bg-violet-600">Prev</button>
+        <button onClick={next} className="rounded bg-violet-700 px-4 py-2 text-white hover:bg-violet-600">Next</button>
       </div>
     </section>
   );

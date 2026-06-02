@@ -1,15 +1,15 @@
 export default function Work(){
     return (
         
-        <section id="work" className="min-h-screen bg-slate-900 px-6 py-16 text-white md:px-16">
-      <h2 className="mb-10 text-center text-4xl font-bold">Projects</h2>
+        <section id="work" className="min-h-screen bg-[#0f172a] px-5 py-[70px] text-white md:px-[10%]">
+      <h2 className="mb-11 text-center text-[34px]">Projects</h2>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2">
 
         {/* Project 1 */}
-        <div className="rounded-2xl bg-slate-950 p-7 shadow-2xl shadow-black/50 transition hover:-translate-y-1">
-          <h3 className="text-2xl font-semibold text-sky-400">Resolve Now</h3>
-          <span className="mt-2 block text-sm text-slate-400">May 2025 - July 2025</span>
+        <div className="rounded-[18px] bg-[#020617] p-[26px] shadow-[0_18px_30px_rgba(0,0,0,0.45)] transition hover:-translate-y-2">
+          <h3 className="text-[22px] text-[#38bdf8]">Resolve Now</h3>
+          <span className="my-[10px] mb-[18px] block text-[13px] text-[#94a3b8]">May 2025 – July 2025</span>
 
           <p>
             Resolve Now is an online platform for registering, tracking, and
@@ -18,7 +18,7 @@ export default function Work(){
             communication between users and authorities.
           </p>
 
-          <ul className="mb-5 list-disc space-y-2 pl-5 text-sm leading-relaxed">
+          <ul className="mb-[18px] list-disc pl-[18px]">
             <li>Developed user and admin modules for complaint registration and tracking.</li>
             <li>Integrated real-time status updates and secure data handling.</li>
             <li>Designed a user-friendly interface ensuring smooth navigation.</li>
@@ -30,7 +30,7 @@ export default function Work(){
               href="https://github.com/Nali-projects/resolve-now"
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg bg-slate-700 px-4 py-2 text-sm text-white transition hover:bg-slate-600"
+              className="rounded-lg bg-[#334155] px-4 py-2 text-[14px] text-white no-underline"
             >
               GitHub
             </a>
@@ -38,7 +38,7 @@ export default function Work(){
               href="https://resolve-now-1.onrender.com"
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+              className="rounded-lg bg-[#38bdf8] px-4 py-2 text-[14px] text-[#020617] no-underline"
             >
               View Project
             </a>
@@ -46,16 +46,16 @@ export default function Work(){
         </div>
 
         {/* Project 2 */}
-        <div className="rounded-2xl bg-slate-950 p-7 shadow-2xl shadow-black/50 transition hover:-translate-y-1">
-          <h3 className="text-2xl font-semibold text-sky-400">Sample Try-out (APECET Mock Test)</h3>
-          <span className="mt-2 block text-sm text-slate-400">5 Months</span>
+        <div className="rounded-[18px] bg-[#020617] p-[26px] shadow-[0_18px_30px_rgba(0,0,0,0.45)] transition hover:-translate-y-2">
+          <h3 className="text-[22px] text-[#38bdf8]">Sample Try-out (APECET Mock Test)</h3>
+          <span className="my-[10px] mb-[18px] block text-[13px] text-[#94a3b8]">5 Months</span>
 
           <p>
             Sample Try-out is an APECET mock test website designed to help
             students prepare through a real exam-like environment.
           </p>
 
-          <ul className="mb-5 list-disc space-y-2 pl-5 text-sm leading-relaxed">
+          <ul className="mb-[18px] list-disc pl-[18px]">
             <li>Defined project goals and allocated tasks to team members.</li>
             <li>Designed backend logic using efficient coding practices.</li>
             <li>Implemented and managed databases for seamless data handling.</li>
@@ -67,7 +67,7 @@ export default function Work(){
               href="https://github.com/nali-kusuma2004/sample_try_out"
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg bg-slate-700 px-4 py-2 text-sm text-white transition hover:bg-slate-600"
+              className="rounded-lg bg-[#334155] px-4 py-2 text-[14px] text-white no-underline"
             >
               GitHub
             </a>
@@ -75,7 +75,7 @@ export default function Work(){
               href="https://nali-kusuma2004.github.io/sample_try_out/index.html"
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-sky-300"
+              className="rounded-lg bg-[#38bdf8] px-4 py-2 text-[14px] text-[#020617] no-underline"
             >
               View Project
             </a>
